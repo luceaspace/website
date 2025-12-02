@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lucea Space — Contact</title>
+  <link rel="stylesheet" href="../CSS/contact.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">
+        <img src="../Assets/logo1.png" alt="Lucea Space logo" class="logo-img" />
+        <span class="brand">Lucea Space</span>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="web.html">Website</a></li>
+          <li><a href="digi.html">Digitalmarketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu"><span></span></button>
+    </div>
+  </header>
+
+  <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
+    <div class="sb-inner">
+      <button id="closeSidebarBtn" class="sb-close" aria-label="Close">✕</button>
+
+      <div class="sb-logo">
+        <img src="../Assets/logo.png" alt="logo" class="logo-img1" />
+        <span class="brand1">Lucea Space</span>
+      </div>
+
+      <div class="sb-nav-wrap">
+        <ul class="sb-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="web.html">Website</a></li>
+          <li><a href="digi.html">Digitalmarketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <div id="mobileOverlay" class="mobile-overlay" hidden></div>
+
+  <!-- Side Contact Bar -->
+<div id="sideContactBar">
+  <a id="sidePhone" class="side-item side-phone" aria-label="Call us">
+    <img src="../Assets/phone.webp" alt="Phone">
+  </a>
+
+  <a id="sideWhatsApp" class="side-item side-whatsapp" aria-label="Chat on WhatsApp">
+    <img src="../Assets/whats.png" alt="WhatsApp">
+  </a>
+
+  
+  <a id="sideInsta" class="side-item side-insta" aria-label="Instagram">
+    <img src="../Assets/insta.png" alt="Instagram">
+  </a>
+
+  <a id="sideLinkedIn" class="side-item side-linkedin" aria-label="LinkedIn">
+    <img src="../Assets/Linkin.png" alt="LinkedIn">
+  </a>
+
+</div>
+
+  <main class="page-main">
+    <section class="contact-section container">
+
+      <div class="big-card">
+
+        <div class="card card-form">
+          <h1 class="card-title">Get in touch</h1>
+          <p class="card-sub">Tell us about your project — we'll respond within 1 business day.</p>
+
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/xldklwgy"method="POST"autocomplete="off">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="two-col">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+91 9XXXXXXXXX" />
+              </div>
+            </div>
+
+            <div>
+              <label for="service">Service interest</label>
+              <select id="service" name="service">
+                <option value="UI/UX Design">UI / UX Design</option>
+                <option value="Website Development">Website Development</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Other">Other / Consultation</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Short brief, timeline, budget (optional)" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn1 primary">Send message</button>
+              <button type="button" id="clearBtn" class="btn1">Clear</button>
+            </div>
+        </form>
+
+
+        </div>
+
+        <aside class="card card-info dark">
+          <!-- Technologies grid -->
+          <div class="tech-grid" id="techGrid">
+            <div class="tech-item"><div class="tech-title">Website</div><div class="tech-sub">Full-stack sites</div></div>
+            <div class="tech-item"><div class="tech-title">Advertising</div><div class="tech-sub">Meta Ads, Google Ads</div></div>
+            <div class="tech-item"><div class="tech-title">SEO</div><div class="tech-sub">On-page & Off-page</div></div>
+            <div class="tech-item"><div class="tech-title">SMM</div><div class="tech-sub">Social growth</div></div>
+            <div class="tech-item"><div class="tech-title">Analytics</div><div class="tech-sub">GA, GTM</div></div>
+            <div class="tech-item"><div class="tech-title">Content</div><div class="tech-sub">Copy & Creatives</div></div>
+            <div class="tech-item"><div class="tech-title">Email</div><div class="tech-sub">Automation & Flows</div></div>
+            <div class="tech-item"><div class="tech-title">Design</div><div class="tech-sub">Figma, UI Kits</div></div>
+          </div>
+
+          <h3 class="info-title">Contact details</h3>
+
+          <div class="meta">
+            <div class="meta-row">
+              <div class="label">Phone</div>
+              <div class="value">
+                <button id="copyPhone" class="link-like">+91 7904384080</button>
+              </div>
+            </div>
+
+            <div class="meta-row">
+              <div class="label">Email</div>
+              <div class="value">
+                <button id="emailLink" class="link-like">luceaspace@gmail.com</button>
+              </div>
+            </div>
+
+            <div class="meta-row">
+              <div class="label">LinkedIn</div>
+              <div class="value">
+                <button id="linkedInLink" class="link-like">linkedin.com/company/luceaspace</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="privacy-note muted">
+            We respect your privacy. By contacting us you agree to our
+            <a href="#" class="under" style="color:rgba(255,255,255,0.82); text-decoration:underline;">privacy policy</a>.
+          </p>
+        </aside>
+
+      </div>
+
+    </section>
+  </main>
+
+  <div id="toast" class="toast" aria-hidden="true"></div>
+
+  <footer>
+    <div>
+      <strong>Lucea Space</strong>
+      <div><small class="muted">Delivering growth-driven strategy</small></div>
+      <div><small class="muted">© 2025 Lucea Space</small></div>
+    </div>
+    <div class="contact">
+      <div>
+        <small class="muted">Phone</small>
+        <div class="contact-value" id="phoneValue">+917904384080</div>
+      </div>
+      <div>
+        <small class="muted">LinkedIn</small>
+        <div class="contact-value"><a href="https://www.linkedin.com/company/luceaspace" target="_blank" rel="noopener">https://www.linkedin.com/company/luceaspace</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/contact.js"></script>
+  <script src="../JS/script.js"></script>
+</body>
+</html>

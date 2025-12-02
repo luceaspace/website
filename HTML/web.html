@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lucea Space — Services & Pricing</title>
+  <link rel="stylesheet" href="../CSS/web.css" />
+  <link rel="stylesheet" href="../CSS/contact.css">
+</head>
+<body>
+   <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">
+        <img src="../Assets/logo1.png" alt="Lucea Space logo" class="logo-img" />
+        <span class="brand">Lucea Space</span>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="web.html">Website</a></li>
+          <li><a href="digi.html">Digitalmarketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu"><span></span></button>
+    </div>
+  </header>
+
+  <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
+    <div class="sb-inner">
+      <button id="closeSidebarBtn" class="sb-close" aria-label="Close">✕</button>
+
+      <div class="sb-logo">
+        <img src="../Assets/logo.png" alt="logo" class="logo-img1" />
+        <span class="brand1">Lucea Space</span>
+      </div>
+
+      <div class="sb-nav-wrap">
+        <ul class="sb-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="web.html">Website</a></li>
+          <li><a href="digi.html">Digitalmarketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <div id="mobileOverlay" class="mobile-overlay" hidden></div>
+
+  <!-- Side Contact Bar -->
+<div id="sideContactBar">
+  <a id="sidePhone" class="side-item side-phone" aria-label="Call us">
+    <img src="../Assets/phone.webp" alt="Phone">
+  </a>
+
+  <a id="sideWhatsApp" class="side-item side-whatsapp" aria-label="Chat on WhatsApp">
+    <img src="../Assets/whats.png" alt="WhatsApp">
+  </a>
+
+  
+  <a id="sideInsta" class="side-item side-insta" aria-label="Instagram">
+    <img src="../Assets/insta.png" alt="Instagram">
+  </a>
+
+  <a id="sideLinkedIn" class="side-item side-linkedin" aria-label="LinkedIn">
+    <img src="../Assets/Linkin.png" alt="LinkedIn">
+  </a>
+
+</div>
+
+  <!-- main content -->
+  <main class="page-main">
+    <section class="cards-section container">
+      <h1 class="page-title">Website Services</h1>
+
+      <div class="cards-grid">
+        <article class="service-card" data-key="uiux">
+          <img src="../Assets/i1.png" alt="UI UX Design" class="card-img" />
+          <div class="card-body">
+            <h2>UI / UX Design</h2>
+            <p class="card-desc">User-centered interfaces and experience design that converts.</p>
+            <div class="card-actions">
+              <button class="btn card-toggle" data-target="uiux">Get Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card" data-key="websites">
+          <img src="../Assets/i2.png" alt="Websites" class="card-img" />
+          <div class="card-body">
+            <h2>Websites</h2>
+            <p class="card-desc">E-commerce, static & dynamic sites built to perform.</p>
+            <div class="card-actions">
+              <button class="btn card-toggle" data-target="websites">Get Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card" data-key="maintenance">
+          <img src="../Assets/i3.jpeg" alt="Maintenance" class="card-img" />
+          <div class="card-body">
+            <h2>Maintenance</h2>
+            <p class="card-desc">Monthly updates, security, backups and performance tuning.</p>
+            <div class="card-actions">
+              <button class="btn card-toggle" data-target="maintenance">Get Quote</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- pricing panel (shared) -->
+      <div id="pricingPanel" class="pricing-panel" aria-hidden="true">
+        <div class="pricing-inner">
+          <div class="pricing-header">
+            <h2>Plans & Pricing</h2>
+            <button id="closePricing" class="ghost">Close</button>
+          </div>
+
+          <p class="muted">Choose a plan that fits your needs.</p>
+
+          <div id="plansWrap" class="plans-wrap">
+            <!-- UI/UX plans -->
+            <div class="plans" data-for="uiux">
+              <div class="plan-card">
+                <div class="plan-badge">Basic</div>
+                <div class="plan-price">₹6,000</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Wireframes</li>
+                  <li class="ok">2 screens</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>User research summary</li>
+                    <li>Low-fi wireframes</li>
+                    <li>2 screen layouts</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="UI / UX — Basic">Contact us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Standard</div>
+                <div class="plan-price">₹18,000</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Wireframes</li>
+                  <li class="ok">8 screens + prototype</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>User flows & wireframes</li>
+                    <li>Interactive prototype</li>
+                    <li>Design handoff assets</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="UI / UX — Standard">Contact us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Premium</div>
+                <div class="plan-price">₹45,000</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Full UI kit</li>
+                  <li class="ok">20 screens + handoff</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Visual system</li>
+                    <li>High-fidelity screens</li>
+                    <li>Developer-ready assets</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="UI / UX — Premium">Contact us</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Websites plans -->
+            <div class="plans" data-for="websites">
+              <div class="plan-card">
+                <div class="plan-badge">Static</div>
+                <div class="plan-price">₹8,000</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Up to 5 pages</li>
+                  <li class="ok">Fast delivery</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Responsive templates</li>
+                    <li>SEO-friendly markup</li>
+                    <li>Performance optimizations</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="Website — Static">Contact us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Dynamic</div>
+                <div class="plan-price">₹25,000+</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">CMS / database</li>
+                  <li class="ok">Admin area</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>CMS integration</li>
+                    <li>Content workflows</li>
+                    <li>Auth & role setup</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="Website — Dynamic">Contact us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">E-commerce</div>
+                <div class="plan-price">₹55,000+</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Product catalogue</li>
+                  <li class="ok">Payments integration</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Cart & checkout</li>
+                    <li>Payment gateway</li>
+                    <li>Order management</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="Website — E-commerce">Contact us</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Maintenance plans -->
+            <div class="plans" data-for="maintenance">
+              <div class="plan-card">
+                <div class="plan-badge">Starter</div>
+                <div class="plan-price">₹2,500 /mo</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Monthly updates</li>
+                  <li class="ok">Backups</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Security patches</li>
+                    <li>Scheduled backups</li>
+                    <li>Health checks</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="Maintenance — Starter">Contact us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Business</div>
+                <div class="plan-price">₹6,000 /mo</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">Priority support</li>
+                  <li class="ok">Uptime checks</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Priority support</li>
+                    <li>Performance tuning</li>
+                    <li>Monitoring & alerts</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="Maintenance — Business">Contact us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Enterprise</div>
+                <div class="plan-price">Custom</div>
+                <ul class="plan-features list-symbol">
+                  <li class="ok">SLA + engineer</li>
+                  <li class="no">Contact for pricing</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Dedicated engineer</li>
+                    <li>SLA & incident handling</li>
+                    <li>On-call support</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="Maintenance — Enterprise">Contact us</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+    </section>
+  </main>
+
+   <footer>
+    <div>
+      <strong>Lucea Space</strong>
+      <div><small class="muted">Delivering growth-driven strategy</small></div>
+      <div><small class="muted">© 2025 Lucea Space</small></div>
+    </div>
+    <div class="contact">
+      <div>
+        <small class="muted">Phone</small>
+        <div class="contact-value" id="phoneValue">+91 7904384080</div>
+      </div>
+      <div>
+        <small class="muted">LinkedIn</small>
+        <div class="contact-value"><a id="linkedIn" href="#" target="_blank" rel="noopener">https://www.linkedin.com/company/luceaspace</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/web.js"></script>
+  <script src="../JS/script.js"></script>
+</body>
+</html>

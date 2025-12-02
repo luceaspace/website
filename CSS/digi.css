@@ -1,0 +1,495 @@
+:root{
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --muted: #6b6b6b;
+  --accent: #000000;
+  --card-w: 320px;
+  --gap: 20px;
+  --container-max: 1600px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* global box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* page basics */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  max-width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid var(--fg);
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--fg);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* main content */
+.page-main {
+  flex: 1 1 auto;
+}
+
+/* cards section */
+.cards-section {
+  padding-top: 28px;
+  padding-bottom: 48px;
+}
+
+.page-title {
+  margin: 0 0 24px 0;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--fg);
+}
+
+/* cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+  min-width: 0;
+}
+
+/* service card */
+.service-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: visible;
+  background: transparent;
+  transition: transform .26s ease, box-shadow .26s ease;
+  min-height: 360px;
+  min-width: 0;
+}
+
+/* white panel behind card */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  z-index: 0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(10,10,10,0.06);
+  pointer-events: none;
+}
+
+/* content should sit above the pseudo panel */
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* card image */
+.card-img {
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  display: block;
+}
+
+/* card body */
+.card-body {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 12px;
+  padding-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.card-body h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+/* pricing panel (expands below cards) */
+.pricing-panel {
+  margin-top: 28px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .44s cubic-bezier(.2,.9,.2,1), opacity .28s ease;
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.pricing-panel[aria-hidden="false"] {
+  opacity: 1;
+}
+
+/* inside pricing card */
+.pricing-inner {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 16px 40px rgba(10,10,10,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* header of pricing */
+.pricing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.pricing-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+/* neutral ghost button */
+.ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* muted subtitle */
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* plans wrap and single group */
+.plans-wrap {
+  display: block;
+}
+
+.plans {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+/* plan card */
+.plan-card {
+  width: calc((100% - 36px) / 3);
+  min-width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 18px 22px 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  position: relative;
+  overflow: visible;
+  min-width: 0;
+  margin-top: 10px;
+}
+
+/* price ribbon */
+.plan-badge {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -18px;
+  background: linear-gradient(180deg, #ff8a00 0%, #ff6200 100%);
+  color: #fff;
+  padding: 16px 34px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
+  box-shadow: 0 18px 34px rgba(0,0,0,0.14);
+  text-align: center;
+}
+
+/* price value below badge */
+.plan-price {
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 26px;
+  text-align: center;
+  color: var(--fg);
+}
+
+/* feature list */
+.plan-features {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.plan-features li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+/* service list */
+.plan-services {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.plan-services strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+
+/* list icons */
+.list-symbol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-symbol li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.list-symbol li.ok::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2fbf73;
+  font-weight: 700;
+  background: rgba(47,191,115,0.08);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.list-symbol li.no::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e05f4a;
+  font-weight: 700;
+  background: rgba(224,95,74,0.06);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* plan actions */
+.plan-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+/* responsive rules */
+/* Tablet breakpoint: keep navbar visible, mobile below 768px */
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .auth {
+    display: none;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plan-card {
+    width: calc((100% - 18px) / 2);
+  }
+  .contact-value {
+    font-size: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-bottom: 6px;
+  }
+
+  .card-img {
+    height: 180px;
+  }
+
+  .plan-card {
+    width: 100%;
+  }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .plan-badge {
+    top: -14px;
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+
+  .header-row {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  header {
+    padding: 12px;
+    justify-content: space-between;
+  }
+  .brand {
+    font-size: 16px;
+  }
+  .mobile-sidebar {
+    width: 92%;
+  }
+  .contact-value {
+    font-size: 12px;
+  }
+}
+
+/* Extra tiny phones (<= 400px) */
+@media (max-width: 400px) {
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .plan-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  footer {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    padding: 12px;
+    justify-content: space-between;
+  }
+  .brand {
+    font-size: 16px;
+  }
+  .mobile-sidebar {
+    width: 92%;
+  }
+  .contact-value {
+    font-size: 12px;
+  }
+}
+
+/* FOOTER */
+footer {
+  padding: 26px 6vw;
+  border-top: 1px solid rgba(10, 10, 10, 0.08);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-value {
+  font-weight: 700;
+}
+
+/* tiny helpers */
+.hidden {
+  display: none !important;
+}

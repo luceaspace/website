@@ -1,0 +1,250 @@
+:root{
+    --bg:#070708;                   /* page background (dark) */
+    --panel-bg:#ffffff;             /* white form panels */
+    --panel-foreground:#0b0b0b;     /* dark text */
+    --accent:#000000;               /* black CTA */
+    --accent-contrast:#ffffff;      /* white text for black CTA */
+    --muted:#8b8b8b;
+    --card-radius:14px;
+    --card-w:960px;
+    --card-h:480px;
+    --gap:20px;
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+
+  /* reset */
+  *{box-sizing:border-box}
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(---panel-bg);
+    color:var(--panel-foreground);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+
+  /* center the UI */
+  .wrap{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 18px;
+  }
+
+  /* main card */
+  .auth-card{
+    width:100%;
+    max-width:var(--card-w);
+    height:auto;
+    background:transparent;
+    position:relative;
+    border-radius:var(--card-radius);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    overflow:visible;
+    align-items:stretch;
+    box-shadow: 0 18px 70px rgba(0,0,0,0.6);
+  }
+
+  /* left and right panels (forms) */
+  .panel{
+    min-height:var(--card-h);
+    padding:34px 42px;
+    background:var(--panel-bg);
+    color:var(--panel-foreground);
+    border-radius:var(--card-radius);
+    border: 1px solid rgba(255,255,255,0.06);
+    position:relative;
+    z-index:2;
+    overflow:auto;
+  }
+
+  /* panel alignment tweaks */
+  .panel.left{
+    padding-left:46px;
+    padding-right:30px;
+  }
+  .panel.right{
+    padding-left:30px;
+    padding-right:46px;
+  }
+
+  /* brand logo */
+  .logo-small{
+    display:inline-block;
+    width:56px;
+    height:56px;
+    object-fit:contain;
+    border-radius:6px;
+    background:transparent;
+  }
+
+  .brand{
+    display:block;
+    margin-bottom:14px;
+    font-weight:800;
+    font-size:18px;
+    color:var(--panel-foreground);
+  }
+
+  .title{
+    font-size:32px;
+    font-weight:800;
+    margin:0 0 8px 0;
+  }
+  .subtitle{
+    color:var(--muted);
+    margin:0 0 18px 0;
+    font-size:14px;
+  }
+
+  /* black overlay panel (sliding) */
+  .slide-panel{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:50%;
+    right:0;
+    border-radius:var(--card-radius);
+    background:linear-gradient(180deg,#0b0b0b 0%, #0b0b0b 100%);
+    z-index:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: right 480ms cubic-bezier(.22,.9,.3,1), left 480ms cubic-bezier(.22,.9,.3,1);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    padding:30px;
+    overflow:hidden;
+  }
+
+  /* content inside the slide panel */
+  .slide-inner{
+    color: #fff;
+    text-align:left;
+    max-width:320px;
+    line-height:1.4;
+  }
+
+  .slide-inner h2{
+    margin:0 0 14px 0;
+    font-size:20px;
+    font-weight:800;
+  }
+  .slide-inner p{margin:0 0 22px 0;color:rgba(255,255,255,0.9)}
+  .slide-cta{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.12);
+    background:#fff;
+    color:#000;
+    cursor:pointer;
+    font-weight:700;
+  }
+
+  /* active state when Sign Up selected: slide-panel moves to left and covers left half */
+  .auth-card.sign-up-active .slide-panel{
+    left:0;
+    right:auto;
+  }
+
+  /* form controls */
+  .form-row{margin-bottom:16px}
+  label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+  input[type="text"], input[type="email"], input[type="password"]{
+    width:100%;
+    padding:12px 14px;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0.06);
+    background:#f6f6f6;
+    font-size:15px;
+    color:#111;
+    outline:none;
+    transition:box-shadow .12s ease, transform .12s ease;
+  }
+  input::placeholder{color:rgba(0,0,0,0.38)}
+  input:focus{box-shadow:0 6px 18px rgba(0,0,0,0.06);transform:translateY(-1px)}
+
+  .controls{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 18px;
+    border-radius:10px;
+    font-weight:800;
+    cursor:pointer;
+    border:0;
+  }
+  /* black CTA used on white form */
+  .btn.primary-black{
+    background:var(--accent);
+    color:var(--accent-contrast);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  }
+  /* ghost on dark panel */
+  .btn.ghost-white{
+    background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12)
+  }
+
+  /* google button */
+  .btn.google{
+    background:#fff;color:#111;border-radius:10px;border:1px solid rgba(0,0,0,0.06);
+    padding:10px 14px;font-weight:700;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  }
+  .btn.google svg{height:18px;width:18px;display:inline-block;vertical-align:middle}
+
+  /* helper links */
+  .muted{color:var(--muted);font-size:14px}
+  .link{color:var(--accent);font-weight:700;cursor:pointer}
+
+  /* small UX: password toggle */
+  .pw-wrap{position:relative}
+  .pw-toggle{
+    position:absolute;right:10px;top:70%;transform:translateY(-50%);background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:17px
+  }
+
+  /* responsive: small screens stack */
+  @media (max-width:920px){
+    :root{ --card-w:700px; --card-h:auto; }
+    .auth-card{grid-template-columns:1fr; max-width:700px; padding:0; box-shadow:0 22px 70px rgba(0,0,0,0.7)}
+    .slide-panel{
+      position:relative;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      margin-top:18px;
+      right:auto;
+      left:auto;
+      padding:18px;
+    }
+    .auth-card.sign-up-active .slide-panel{ left:auto; }
+    .panel{border-radius:12px; padding:20px}
+    .panel + .panel{margin-top:12px}
+    .slide-inner{max-width:100%}
+    .title{font-size:28px}
+
+    /* <<< FIX: mobile: show only the active panel (prevents both being visible) >>> */
+    /* by default (sign-in mode) show left panel only; when .sign-up-active is present show right only */
+    .auth-card .panel{display:none}
+    .auth-card:not(.sign-up-active) .panel.left{display:block}
+    .auth-card.sign-up-active .panel.right{display:block}
+    /* keep slide panel visible always (it's below when stacked) */
+    .slide-panel{display:block}
+  }
+
+  /* extra mobile fine tuning */
+  @media (max-width:420px){
+    .title{font-size:24px}
+    .form-row{margin-bottom:12px}
+    .controls{flex-direction:column;align-items:stretch}
+    .btn{width:100%;justify-content:center}
+    .btn.google{display:flex; justify-content:center}
+  }
+
+  /* a11y focus */
+  button:focus, input:focus{outline:3px solid rgba(34,34,34,0.06);outline-offset:2px}

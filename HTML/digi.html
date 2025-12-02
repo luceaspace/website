@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lucea Space — Digital Marketing</title>
+  <link rel="stylesheet" href="../CSS/digi.css" />
+  <link rel="stylesheet" href="../CSS/contact.css">
+</head>
+<body>
+   <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">
+        <img src="../Assets/logo1.png" alt="Lucea Space logo" class="logo-img" />
+        <span class="brand">Lucea Space</span>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="web.html">Website</a></li>
+          <li><a href="digi.html">Digitalmarketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu"><span></span></button>
+    </div>
+  </header>
+
+  <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
+    <div class="sb-inner">
+      <button id="closeSidebarBtn" class="sb-close" aria-label="Close">✕</button>
+
+      <div class="sb-logo">
+        <img src="../Assets/logo.png" alt="logo" class="logo-img1" />
+        <span class="brand1">Lucea Space</span>
+      </div>
+
+      <div class="sb-nav-wrap">
+        <ul class="sb-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="web.html">Website</a></li>
+          <li><a href="digi.html">Digitalmarketing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <div id="mobileOverlay" class="mobile-overlay" hidden></div>
+
+  <!-- Side Contact Bar -->
+<div id="sideContactBar">
+  <a id="sidePhone" class="side-item side-phone" aria-label="Call us">
+    <img src="../Assets/phone.webp" alt="Phone">
+  </a>
+
+  <a id="sideWhatsApp" class="side-item side-whatsapp" aria-label="Chat on WhatsApp">
+    <img src="../Assets/whats.png" alt="WhatsApp">
+  </a>
+
+  
+  <a id="sideInsta" class="side-item side-insta" aria-label="Instagram">
+    <img src="../Assets/insta.png" alt="Instagram">
+  </a>
+
+  <a id="sideLinkedIn" class="side-item side-linkedin" aria-label="LinkedIn">
+    <img src="../Assets/Linkin.png" alt="LinkedIn">
+  </a>
+
+</div>
+
+  <main class="page-main">
+    <section class="cards-section container">
+      <h1 class="page-title">Digital Marketing Services</h1>
+
+      <div class="cards-grid">
+        <!-- Service: Social Media Marketing -->
+        <article class="service-card" data-key="smm">
+          <img src="../Assets/smm.jpg" alt="Social Media Marketing" class="card-img" />
+          <div class="card-body">
+            <h2>Social Media Marketing</h2>
+            <p class="card-desc">Campaigns, content & growth for social channels.</p>
+            <div class="card-actions">
+              <button class="btn card-toggle" data-target="smm">Get Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service: SEO -->
+        <article class="service-card" data-key="seo">
+          <img src="../Assets/seo1.jpg" alt="SEO" class="card-img" />
+          <div class="card-body">
+            <h2>SEO</h2>
+            <p class="card-desc">On-site and off-site SEO to grow organic traffic.</p>
+            <div class="card-actions">
+              <button class="btn card-toggle" data-target="seo">Get Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service: PPC -->
+        <article class="service-card" data-key="ppc">
+          <img src="../Assets/ppc.jpg" alt="PPC" class="card-img" />
+          <div class="card-body">
+            <h2>PPC Advertising</h2>
+            <p class="card-desc">Paid search & social ads to drive conversions quickly.</p>
+            <div class="card-actions">
+              <button class="btn card-toggle" data-target="ppc">Get Quote</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- pricing panel (shared below cards) -->
+      <div id="pricingPanel" class="pricing-panel" aria-hidden="true">
+        <div class="pricing-inner">
+          <div class="pricing-header">
+            <h2>Plans & Pricing</h2>
+            <button id="closePricing" class="ghost">Close</button>
+          </div>
+
+          <p class="muted">Choose a plan that fits your needs.</p>
+
+          <div id="plansWrap" class="plans-wrap">
+            <!-- SMM plans -->
+            <div class="plans" data-for="smm">
+              <!-- Basic -->
+              <div class="plan-card">
+                <div class="plan-badge">Basic</div>
+                <div class="plan-price">₹6,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Platform setup</li>
+                  <li class="ok">3 posts / week</li>
+                  <li class="no">Ad spend included</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Profile setup</li>
+                    <li>Content calendar</li>
+                    <li>Basic reporting</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="SMM — Basic">Contact Us</button>
+                </div>
+              </div>
+
+              <!-- Standard -->
+              <div class="plan-card">
+                <div class="plan-badge">Standard</div>
+                <div class="plan-price">₹18,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Content + Ads</li>
+                  <li class="ok">Daily posting</li>
+                  <li class="ok">Monthly ad management</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Creative content</li>
+                    <li>Ad audience tests</li>
+                    <li>Monthly report</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="SMM — Standard">Contact Us</button>
+                </div>
+              </div>
+
+              <!-- Premium -->
+              <div class="plan-card">
+                <div class="plan-badge">Premium</div>
+                <div class="plan-price">₹45,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Full channel growth</li>
+                  <li class="ok">Advanced ads & creatives</li>
+                  <li class="ok">Dedicated manager</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Strategy & target plan</li>
+                    <li>Weekly optimisation</li>
+                    <li>Custom reporting</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="SMM — Premium">Contact Us</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SEO plans -->
+            <div class="plans" data-for="seo">
+              <div class="plan-card">
+                <div class="plan-badge">Basic</div>
+                <div class="plan-price">₹6,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Site audit</li>
+                  <li class="ok">On-page fixes</li>
+                  <li class="no">Link building</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Technical audit</li>
+                    <li>Meta & content tweaks</li>
+                    <li>Monthly summary</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="SEO — Basic">Contact Us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Standard</div>
+                <div class="plan-price">₹18,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">On & Off-page</li>
+                  <li class="ok">Content optimisation</li>
+                  <li class="ok">Monthly links</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Keyword work</li>
+                    <li>Content edits</li>
+                    <li>Link outreach</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="SEO — Standard">Contact Us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Premium</div>
+                <div class="plan-price">₹45,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Full SEO strategy</li>
+                  <li class="ok">Content & links</li>
+                  <li class="ok">Advanced reporting</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Full content plan</li>
+                    <li>Dedicated SEO lead</li>
+                    <li>Traffic & conversion focus</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="SEO — Premium">Contact Us</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PPC plans -->
+            <div class="plans" data-for="ppc">
+              <div class="plan-card">
+                <div class="plan-badge">Basic</div>
+                <div class="plan-price">₹6,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Campaign setup</li>
+                  <li class="ok">Basic targeting</li>
+                  <li class="no">Conversion optimisation</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Account setup</li>
+                    <li>Initial ads</li>
+                    <li>Weekly checks</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="PPC — Basic"> Contact Us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Standard</div>
+                <div class="plan-price">₹18,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Optimised campaigns</li>
+                  <li class="ok">A/B creatives</li>
+                  <li class="ok">Conversion tracking</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Weekly optimisation</li>
+                    <li>Bid & audience testing</li>
+                    <li>Monthly report</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="PPC — Standard"> Contact Us</button>
+                </div>
+              </div>
+
+              <div class="plan-card">
+                <div class="plan-badge">Premium</div>
+                <div class="plan-price">₹45,000</div>
+                <ul class="plan-feature-list">
+                  <li class="ok">Full-funnel ads</li>
+                  <li class="ok">Advanced CRO</li>
+                  <li class="ok">Dedicated manager</li>
+                </ul>
+                <div class="plan-services">
+                  <strong>We deliver</strong>
+                  <ul class="service-list">
+                    <li>Creative strategy</li>
+                    <li>Daily optimisation</li>
+                    <li>Custom dashboards</li>
+                  </ul>
+                </div>
+                <div class="plan-actions">
+                  <button class="btn get-quote" data-service="PPC — Premium"> Contact Us</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Lucea Space</strong>
+      <div><small class="muted">Delivering growth-driven strategy</small></div>
+      <div><small class="muted">© 2025 Lucea Space</small></div>
+    </div>
+    <div class="contact">
+      <div>
+        <small class="muted">Phone</small>
+        <div class="contact-value" id="phoneValue">+917904384080</div>
+      </div>
+      <div>
+        <small class="muted">LinkedIn</small>
+        <div class="contact-value"><a id="linkedIn" href="#" target="_blank" rel="noopener">https://www.linkedin.com/company/luceaspace</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/digi.js"></script>
+  <script src="../JS/script.js"></script>
+</body>
+</html>
