@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!loader) return;
 
   // Choose active video by screen size
-  const isMobile = window.innerWidth < 768;
+  const isMobile = window.innerWidth < 1025;
   const activeVideo   = isMobile ? mobileVid : desktopVid;
   const inactiveVideo = isMobile ? desktopVid : mobileVid;
 
@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- SKIP BUTTON ---
  // Skip button logic with countdown
 let skipLocked = true;   // Prevent skipping initially
-let timeLeft = 5;        // Countdown seconds
+let timeLeft = 4;        // Countdown seconds
 
 // Start countdown on loader start
 function startSkipCountdown() {

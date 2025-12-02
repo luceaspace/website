@@ -482,14 +482,14 @@ footer {
 }
 
 /* Desktop & tablet */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .desktop-video {
     display: block;
   }
 }
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 999px) {
   .mobile-video {
     display: block;
   }
